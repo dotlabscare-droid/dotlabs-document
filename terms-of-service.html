@@ -1,73 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DotLabs Terms of Service</title>
-    <meta name="description" content="DotLabs Terms of Service">
-    <link rel="icon" href="/images/hm_full.png" type="image/png">
-    <style>
-      :root{--primary:#135D66;--muted:#6b6b6b;--bg:#f6fbfb;--card:#ffffff;--radius:12px}
-      *{box-sizing:border-box}
-      body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:radial-gradient(1000px 300px at 10% 10%, rgba(100,204,197,0.04), transparent),var(--bg);color:#0f1720;padding:28px}
-      .wrap{max-width:980px;margin:0 auto}
-      header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
-      .brand{display:flex;align-items:center;gap:12px}
-      .brand img.logo{height:40px;width:auto}
-      .brand .title{font-weight:700;color:var(--primary);font-size:18px}
-      .brand .sub{font-size:12px;color:var(--muted)}
-      .nav a{color:var(--primary);text-decoration:none;margin-left:12px;font-weight:600}
-      .container{background:var(--card);padding:32px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(19,93,102,0.06)}
-      h1{text-align:center;margin:0 0 6px;font-size:28px}
-      .updated-date{text-align:center;color:#666;font-style:italic;margin-bottom:18px}
-      p{margin:12px 0;text-align:justify;line-height:1.6}
-      .contact-info{background:#f0f7ff;padding:18px;border-radius:8px;margin-top:18px}
-      footer{margin-top:18px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted)}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms and Conditions - dotlabs</title>
+  <meta name="description" content="Terms and Conditions for dotlabs — AI-powered health insights by HealthSutra.ai">
+  <link rel="icon" href="/images/hm_full.png" type="image/png">
+  <style>
+    :root {
+      --primary: #135D66;
+      --secondary: #10A19D;
+      --accent: #64CCC5;
+      --bg: #f6fbfb;
+      --card: #ffffff;
+      --muted: #6b6b6b;
+      --radius: 14px;
+    }
+    * {box-sizing: border-box}
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; 
+      background: radial-gradient(1200px 400px at 10% 10%, rgba(100,204,197,0.08), transparent), radial-gradient(900px 300px at 90% 90%, rgba(16,161,157,0.04), transparent); 
+      padding: 40px; 
+      background-color: var(--bg);
+    }
+    .wrap {max-width: 1100px; width: 100%; margin: 0 auto;}
+    header {display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px}
+    .brand {display: flex; align-items: center; gap: 14px}
+    .brand img.logo {height: 48px}
+    .brand .title {font-weight: 700; color: var(--primary); font-size: 20px}
+    .brand .sub {font-size: 12px; color: var(--muted)}
+    
+    .content-box {
+      background: var(--card);
+      padding: 40px;
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(16,161,157,0.06);
+      margin-bottom: 28px;
+    }
+    .legal-text p {
+      line-height: 1.6;
+      color: #333;
+      margin: 0 0 16px 0;
+    }
+    .legal-text h1 {
+      color: var(--primary);
+      font-size: 28px;
+      margin: 0 0 8px 0;
+    }
+    .legal-text h2 {
+      color: var(--primary);
+      font-size: 20px;
+      margin: 28px 0 16px 0;
+      border-bottom: 1px solid rgba(16, 161, 157, 0.1);
+      padding-bottom: 6px;
+    }
+    .legal-text h3 {
+      color: var(--secondary);
+      font-size: 16px;
+      margin: 20px 0 12px 0;
+    }
+    .legal-text .update-date {
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .legal-text .bullet-list {
+      margin-bottom: 16px;
+      padding-left: 20px;
+    }
+    
+    footer {margin-top: 18px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--muted)}
+    .decor {position: absolute; right: -120px; top: -60px; width: 300px; height: 300px; border-radius: 50%; background: linear-gradient(180deg, rgba(100,204,197,0.12), transparent); filter: blur(30px); pointer-events: none}
+    a {color: var(--primary); text-decoration: none;}
+    a:hover {text-decoration: underline;}
+    footer a {color: var(--muted);}
+
+    @media (max-width: 768px) {
+      body {padding: 20px;}
+      .content-box {padding: 24px;}
+      header {flex-direction: column; align-items: flex-start; gap: 16px;}
+    }
+  </style>
 </head>
 <body>
+  <div class="decor" aria-hidden="true"></div>
   <div class="wrap">
     <header>
-      <div class="brand" aria-label="DotLabs brand">
-        <a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none">
-          <img src="/images/hm_full.png" alt="DotLabs wordmark" class="logo">
-          <div>
-            <div class="title">DotLabs</div>
-            <div class="sub">DotLabs Terms of Service</div>
-          </div>
-        </a>
+      <div class="brand">
+        <img src="/images/hm_full.png" alt="dotlabs logo" class="logo">
+        <div>
+          <div class="title">dotlabs</div>
+          <div class="sub">dotlabs is an AI-powered health insights platform that analyzes laboratory reports and provides clear, actionable health summaries.</div>
+        </div>
       </div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="privacy-policy.html">Privacy</a>
-      </nav>
+      <div style="display:flex;gap:12px;align-items:center">
+        <a href="index.html" style="font-weight:600">Home</a>
+        <a href="privacy-policy.html" style="font-weight:600">Privacy</a>
+        <a href="terms-of-service.html" style="font-weight:600;text-decoration:underline">Terms</a>
+      </div>
     </header>
 
-    <main class="container" role="main">
-      <h1>DotLabs Terms of Service</h1>
-      <div class="updated-date">As updated on 20th Feb 2026</div>
-
-      <p>These terms of use (“Terms”) set out the terms on which you may access and use the DotLabs Platform. By using the Platform you agree to be bound by these Terms.</p>
+    <main class="content-box legal-text">
+      <h1>DotLabs Terms and Conditions</h1>
+      <p><strong>TERMS AND CONDITIONS</strong></p>
+      <div class="update-date">As updated on 20th Feb 2026</div>
+      
+      <h2>INTRODUCTION AND ACKNOWLEDGMENT</h2>
+      <p>These terms of use (“Terms”) mandate the terms on which You access and register on the web based platform, https://www.dotlabs.care/ and mobile applications, if any (collectively, the “Platform”), operated and managed by HealthMaven Consultancy Pvt Ltd (“dotlabs”), a legal entity having its registered office at 715A, 7th Floor, Spencer Plaza Mall, Anna Salai, Chennai, Tamil Nadu 600002</p>
+      
+      <p>This Terms is an electronic record in terms of the Information Technology Act, 2000 and rules made thereunder as applicable. The Terms are generated by a computer system and do not require any physical, electronic, or digital signatures by the dotlabs. These Terms apply to all Users of the Platform, including those Users who view and access the Materials, those Users who are contributors of the Content and User who wish to avail Services. By clicking on the “I accept” button provided in the Platform, You expressly accept these Terms and agree to be legally bound by them.</p>
+      
+      <p>The Terms are between You and the dotlabs and the User understands and accepts that dotlabs maintains the Platform to provide Users with information about dotlabs and its Services. You also accept that You are required to read the below mentioned Terms, and any use of the Platform constitutes Your acceptance and agreement to be bound by such terms, and the changes made to these Terms from time to time, relating to Your usage of the Platform as communicated and made available on the Platform. If You do not agree to any of the terms enumerated in the Terms and the Privacy Policy, please do not use the Platform.</p>
 
       <h2>1. DEFINITIONS AND INTERPRETATION</h2>
-      <p>Unless the context otherwise requires, for these Terms, the following terms shall have the meaning ascribed to them hereunder.</p>
+      <p>Unless the context otherwise requires, for these Terms, the following terms shall have the meaning ascribed to them hereunder:</p>
+      
+      <p><strong>1.1.</strong> “Applicable Law” means all laws, ordinances, statutes, rules, orders, decrees, injunctions, licenses, permits, approvals, authorizations, consents, waivers, privileges, agreements, and regulations of any governmental authority/court of law having jurisdiction in India over the relevant matter including any interpretations thereof, in effect, including but not limited to, Information Technology Act, 2000 and the rules made thereunder, Digital Personal Data Protection Act, 2023;</p>
+      
+      <p><strong>1.2.</strong> “Content” shall mean any content, including but not limited to, pictures, messages, videos that may be shared, uploaded and posted on the Platform by the User;</p>
+      
+      <p><strong>1.3.</strong> “Eligibility Conditions” shall have the meaning as ascribed to under Clause 2.8;</p>
+      
+      <p><strong>1.4.</strong> “dotlabs IP” shall have the meaning as ascribed to under Clause 7.1;</p>
+      
+      <p><strong>1.5.</strong> “Intellectual Property Rights” means all patents, designs and drawings, trademarks, service marks, logos, domain names, and utility models, copyrights, inventions, brand names, and business names, and any similar rights and the benefit (subject to the burden) of any of the foregoing (in each case whether registered or otherwise, and includes applications for the grant of any of the foregoing and the right to apply for any of the foregoing in any part of the world);</p>
+      
+      <p><strong>1.6.</strong> “Materials” includes (i) the text, software, scripts, graphics, photos, sounds, music, videos, audio-visual combinations, interactive features and other materials;</p>
+      
+      <p><strong>1.7.</strong> “Privacy Policy” shall mean the Privacy Policy available on the Platform;</p>
+      
+      <p><strong>1.8.</strong> “Personal Data” shall have the meaning as ascribed to under the Privacy Policy;</p>
+      
+      <p><strong>1.9.</strong> "Services" shall have the meaning as ascribed under Clause 3;</p>
+      
+      <p><strong>1.10.</strong> “User / Users / You” shall mean and include any such User who visits the Platform or any user who wishes to avail Services through our Platform whether registered or not on the Platform and shall not include your permitted assigns, successors, heirs, and legal representatives, unless the context requires otherwise. For the avoidance of doubt, a User (“Primary User”) may and when creates and manages additional profiles (“Linked Profiles”) on the Platform for their family members, dependents, or any other individuals, for the purpose of uploading and tracking their health data and reports thereby creates Linked Profiles. The Primary User represents that they have obtained due consent and authority from such individuals, namely the Linked Profile users (or, in the case of minors, from their lawful parents or guardians) to provide their Personal Data and access the related Services on their behalf.</p>
+      
+      <p><strong>1.11.</strong> “User Account” means the personal online account created by the User to gain access and use the Platform.</p>
 
-      <!-- ... (rest of original terms content preserved) ... -->
-
-      <div class="contact-info">
-        <strong>Abdul Lathif</strong><br>
-        Director &amp; CEO<br>
-        Email: <a href="mailto:support@dotlabs.care">support@dotlabs.care</a><br>
-        dotlabs, HealthMaven Consultancy Pvt Ltd
+      <h2>2. USER ACCOUNT AND USER OBLIGATIONS</h2>
+      
+      <p><strong>2.1.</strong> The User may view and / or access the Services or the Platform by simply visiting the Platform and clicking on relevant pages that may include articles, newsletters. Furthermore, to access certain other Services, the User must first create a User Account with the Platform by providing details, including Personal Data as may be required by the dotlabs and provided for in the Privacy Policy.</p>
+      
+      <p><strong>2.2. Confidentiality Obligation:</strong> Users shall be responsible for maintaining the confidentiality of the credentials of User Account, and furthermore, dotlabs shall process and maintain the confidentiality of the Personal Data (defined) in accordance with the Applicable Law and is dealt with in detail in the Privacy Policy of dotlabs.</p>
+      
+      <p><strong>2.3. Linked Profiles and Family Accounts:</strong> The Platform allows a Primary User to create Linked Profiles for family members or dependents.</p>
+      
+      <div class="bullet-list">
+        <p>2.3.1 The Primary User shall be solely responsible for ensuring the accuracy of all information submitted for such Linked Profiles and for obtaining any required consent under Applicable Law.</p>
+        <p>2.3.2 dotlabs shall process Personal Data of Linked Profiles in accordance with its Privacy Policy and Applicable Law, and such processing shall be deemed to be based on the Primary User’s consent provided on behalf of such individuals.</p>
+        <p>2.3.3 dotlabs will not directly contact or communicate with any Linked Profile unless required for providing the Services or under Applicable Law.</p>
+        <p>2.3.4 The Primary User agrees that any misuse, unauthorized access, or false information relating to Linked Profiles shall be their responsibility and not that of dotlabs.</p>
       </div>
+      
+      <p><strong>2.4.</strong> In consideration of Your use of the Platform, You agree: (a) that You are of legal age and have the capacity to agree to these Terms and furthermore, if You are a parent / legal guardian of a “minor” then in that event the compliance to the Applicable Law should be adhered to and dotlabs reserves the legal rights to insert necessary protocols / check mechanism to enforce the foregoing including but not limited to the parental / legal guardian’s consent, if required under the Applicable Law and as detailed under the Privacy Policy; (b) to provide complete, accurate, current, and required information about You, including Personal Data (as defined under the Privacy Policy) as may be prompted at the time of registration on the Platform; (c) to maintain the security of Your password and identification; (d) to maintain and promptly update the Personal Data and any information You provide to dotlabs, to keep it accurate, current and complete for providing the Services. You are not permitted to use the Platform or submit Content to the Platform if You do not follow these Terms. If You provide any information that is untrue, inaccurate, unauthorised, not current, or incomplete (or becomes untrue, inaccurate, not current, or incomplete), or if the dotlabs has reasonable grounds to suspect that such information is untrue, inaccurate, not current, or incomplete, the dotlabs has the right to refuse any and all the Services.</p>
+      
+      <p><strong>2.5.</strong> You are entirely responsible for all Content that You upload, post, or otherwise transmit through Your use of the Platform. You agree not to upload, post or otherwise transmit Content that: (a) is inaccurate, false, harmful, obscene, pornographic, defamatory, paedophilic, insulting, racist, violent, offensive, harassing on the basis of gender, unlawful as per the Applicable Law, harmful to a minor, impersonates another person, invasive of another’s privacy, relating or encouraging money laundering or gambling or otherwise objectionable to dotlabs or other Users of the Platform; (b) includes unauthorized disclosure of Personal Data; (c) violates or infringes anyone's intellectual property rights; or (d) contains software viruses or any other computer code, files or programs designed to interrupt, destroy or limit the functionality of any computer software or hardware or telecommunications equipment.</p>
+      
+      <p><strong>2.6.</strong> You agree not to access (or attempt to access) the Platform by any means other than through the interface that is provided by the dotlabs. You shall not use any deep-link, robot, spider or other automatic device, program, algorithm or methodology, or any similar or equivalent manual process, to access, acquire, copy or monitor any portion of the Platform or Content (as defined below), or in any way reproduce or circumvent the navigational structure or presentation of the Platform, Materials or any Content, to obtain or attempt to obtain any Materials, documents or information through any means not specifically made available through the Platform.</p>
+      
+      <p><strong>2.7.</strong> You agree to use the Platform in a lawful manner. Any use of the Platform that dotlabs, in its sole discretion, finds inappropriate and/or offensive may result in suspension and/or termination of a User with or without notice. Conduct that is inappropriate and/or offensive includes without limitation the following:</p>
+      
+      <div class="bullet-list">
+        <p>2.7.1. Defame, abuse, harass, harm, stalk, threaten or otherwise violate the legal rights (including without limitation rights of privacy and publicity) of others;</p>
+        <p>2.7.2. Publish, post, upload, distribute or disseminate any profane, defamatory, infringing, hateful, distasteful, obscene or unlawful topic, name, information, Materials or Content;</p>
+        <p>2.7.3. Use the Platform for any purpose that is in violation of the Applicable Law;</p>
+        <p>2.7.4. Upload files that contain software or other material that violates the rights of any third party, including without limitation Intellectual Property Rights or rights of privacy or publicity;</p>
+        <p>2.7.5. Upload files that contain viruses, trojan horses, worms, time bombs, spiders, cancel bots, corrupted files, or any other similar software, malware or Materials that may damage, interfere with, disrupt, impair, disable or otherwise overburden the operation of any device, computer system or network;</p>
+        <p>2.7.6. Take any action that would undermine any aspect of the Platform;</p>
+        <p>2.7.7. Attempt to gain unauthorized access to the Platform, other User Account(s), or other device, computer system or networks connected to the Platform;</p>
+        <p>2.7.8. Advertise or offer to sell any goods or Services for any commercial purpose on the Platform that are not appropriate or relevant to the Platform;</p>
+        <p>2.7.9. Deceives or misleads the addressee about the origin of the message or knowingly and intentionally communicates any information which is patently false or misleading in nature but may reasonably be perceived as a fact;</p>
+        <p>2.7.10. Impersonate another person;</p>
+        <p>2.7.11. threatens the unity, integrity, defence, security or sovereignty of India, friendly relations with foreign States, or public order, or causes incitement to the commission of any cognisable offence or prevents investigation of any offence or is insulting other nation;</p>
+        <p>2.7.12. is patently false and untrue, and is written or published in any form, with the intentto mislead or harass a person, entity, or agency for financial gain or to cause any injury to any person;</p>
+        <p>2.7.13. reverse engineer, modify, copy, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer, or sell any information or software obtained from the Platform.</p>
+        <p>2.7.14. disrupt or interfere with the security of, or otherwise cause harm to, the Platform, systems resources, accounts, passwords, servers, or networks connected to or accessible through the Platform or any affiliated or linked sites;</p>
+        <p>2.7.15. Post the same Content repeatedly or spam - spamming is strictly prohibited;</p>
+        <p>2.7.16. Download any file posted by another User that You know, or reasonably should know, cannot be legally distributed through the Platform;</p>
+        <p>2.7.17. Access, download, or copy any information, Content and/or Materials from the Platform through artificial means (including without limitation spiders, scrapers, hacking devices, computer programs, bots or other such means);</p>
+        <p>2.7.18. Reproduce, duplicate, copy, sell, re-sell or exploit any information, Materials or Content on the Platform; or</p>
+        <p>2.7.19. Restrict or inhibit any other User from using and enjoying the Platform.</p>
+      </div>
+      
+      <p><strong>2.8.</strong> By using the Platform, You represent and warrant that You currently meet and will continue to meet the following eligibility conditions ("Eligibility Conditions") for as long as You use the Platform: (a) You are of a legal age; (b) You have and will at all times comply with all Applicable Law and regulations; (c) You have the right, authority and capacity to enter into these Terms and to abide by all provisions stipulated in these Terms.</p>
+      
+      <p><strong>2.9.</strong> By using the Platform, You understand and agree that dotlabs may rely on the above Eligibility Conditions, representations and warranties as true. You understand and agree that dotlabs may revise the Eligibility Conditions/Terms from time to time and that User will abide by such revised Eligibility Conditions/Terms or discontinue using the Platform.</p>
+      
+      <p><strong>2.10.</strong> You also understand and agree dotlabs neither confirms nor denies the validity of information provided by Users and that dotlabs does not verify that any or all of the Eligibility Conditions are met by Users.</p>
+
+      <h2>3. SERVICES PROVIDED ON THE PLATFORM</h2>
+      <p><strong>3.1.</strong> You acknowledge that the Platform uses artificial intelligence to produce health insights, recommendations on diet and exercise, follow up tests based on the health data shared by You (“Services”).</p>
+      <p><strong>3.2.</strong> The dotlabs may, at its discretion, add, modify, or remove any of the Services listed above from time to time. The dotlabs may also, at its discretion, have terms and conditions specific to any category or section in addition to these Terms.</p>
+      <p><strong>3.3.</strong> The dotlabs does not (i) adopt any ‘unfair trade practices’ either on the Platform or otherwise with respect to the Services; and (ii) discriminate between Users of the same class or arbitrarily classify the Users.</p>
+
+      <h2>4. FEE</h2>
+      <p><strong>4.1.</strong> The fees of each of the Services shall be displayed on the Platform. The prices mentioned at the time of availing the Service shall be the price charged at the time of providing the Service. The fees for the Services may be modified from time to time.</p>
+      <p><strong>4.2.</strong> The Users will be informed about any additional charges, fees, and costs if any that may be levied on the Services on the Platform at the checkout page during a transaction. The dotlabs does not manipulate the fees for any Services offered on the Platform.</p>
+
+      <h2>5. PAYMENT TERMS</h2>
+      <p><strong>5.1.</strong> The information relating to the accepted payment methods on the Platform shall be displayed during the purchasing process. To the extent permitted by Applicable Law and subject to the Privacy Policy, You acknowledge and agree that the dotlabs may use certain third-party vendors and service providers, including payment gateways, to process payments and manage payment card information.</p>
+      <p><strong>5.2.</strong> Except to the extent otherwise required by Applicable Law, the dotlabs is not liable for any payments authorized through the Platform using Your payment details. Particularly, the dotlabs is not liable for any payments that do not complete because: (a) Your bank account or any other payment did not contain sufficient funds to complete the transaction; (b) You have not provided the dotlabs with correct payment details; (c) Your payment card has expired; or (d) circumstances beyond the dotlabs’s reasonable control (such as, but not limited to, power outages, interruptions of cellular service, or any other interferences from an outside force) prevent the execution of the transaction.</p>
+      <p><strong>5.3.</strong> The Platform shall not be responsible for any unauthorised transactions conducted on our Platform using Your payment details. The Platform shall not be obligated to refund any money to You in such instances.</p>
+
+      <h2>6. REFUNDS</h2>
+      <p>The policy for refund of monies with respect to cancellation of Services or for any other purpose, shall be communicated to the User. The dotlabs shall remit payments towards accepted refund requests of Users in compliance with Applicable Law.</p>
+
+      <h2>7. PROPRIETARY RIGHTS AND INTELLECTUAL PROPERTY RIGHTS</h2>
+      <p><strong>7.1.</strong> User acknowledges and agrees that this Platform and the Content posted herein, which shall include but shall not be limited to pictures, branding, text, Content, graphics, designs, brand logos, audio, video, interfaces and/or any other information, or any Intellectual Property Rights ( whether those rights happen to be registered or not, and wherever in the world those rights may exist) and/or the overall arrangement of Content is protected and is owned, controlled or licensed by or to dotlabs; all comments, feedback, ideas, suggestions, information or any other Content provided by You (hereinafter referred to as “dotlabs IP”). You may not modify, publish, copy, transmit, transfer, sell, reproduce, modify, create derivative works from, license, distribute, frame, hyperlink, download, repost, perform, translate, mirror, display or commercially exploit dotlabs IP in any other way unless the User has agreed otherwise with dotlabs in writing. User further acknowledges that the Services may contain information which is designated confidential by dotlabs and that User shall not disclose such information without the dotlabs's prior written consent. For the avoidance of doubt, Users may download, store, or share any personal health summaries or reports generated for their own use through the Platform with their healthcare providers, family members, or other individuals of their choice, provided such sharing is for personal and non-commercial purposes and the proprietary format and branding of dotlabs remain unaltered.</p>
+      <p><strong>7.2.</strong> You agree not to use any framing techniques to enclose any trademark or logo or other dotlabs IP, or remove, conceal or obliterate any copyright or other proprietary notice or any credit-line or date-line on other mark or source identifier included on the Platform/ Service, including without limitation, the size, colour, location or style of all proprietary marks. Any infringement shall be vigorously defended and pursued to the fullest extent permitted by law.</p>
+
+      <h2>8. PRIVACY POLICY</h2>
+      <p><strong>8.1.</strong> dotlabs is committed to protecting Your Personal Data. Our Privacy Policy available on the Platform provides details about the information we collect about You, how we use it and how we protect it. It also explains Your rights and how to contact us if You have questions about how we use Your information, including Personal Data. Further, dotlabs will, upon receipt of government order, or any order from the court or any competent authority provide information or assistance to authorized Government agencies for verification of identity or traceability of the User, or prevention, detection, investigation, prosecution, cyber security incidents and punishment of offences under any Applicable Law.</p>
+
+      <h2>9. DISCLAIMER</h2>
+      <p>You expressly understand and agree that, to the maximum extent permitted by Applicable Law:</p>
+      <p><strong>9.1.</strong> The Platform is solely operated and managed by dotlabs.</p>
+      <p><strong>9.2.</strong> The Services on the Platform are provided by dotlabs to the Users.</p>
+      <p><strong>9.3.</strong> The information, insights, and recommendations provided on the Platform are generated using artificial intelligence, machine learning, and data analytics tools for informational and educational purposes only.</p>
+      <p><strong>9.4.</strong> dotlabs does not provide medical advice, diagnosis, or treatment, and the Platform’s outputs are not a substitute for consultation with a qualified healthcare professional. You must always seek professional medical advice before making healthcare decisions or starting any treatment.</p>
+      <p><strong>9.5.</strong> The Platform uses artificial intelligence to generate insights and may have limitations, inaccuracies, or biases depending on data quality and user input. The results provided are indicative and probabilistic, not definitive.</p>
+      <p><strong>9.6.</strong> by using the Platform, You acknowledge and agree that the artificial intelligence generated insights are for wellness awareness only and that dotlabs, its affiliates, and partners are not liable for any medical or treatment decisions made based on such information.</p>
+      <p><strong>9.7.</strong> The Platform and other Content are provided by the dotlabs on an “as is” basis without warranty of any kind, express, implied, statutory, or otherwise, including the implied warranties of title, non-infringement, merchantability, or fitness for a particular purpose. Without limiting the foregoing, the dotlabs makes no warranty that the Platform or Services will meet Your requirements, or Your use of the Platform will be uninterrupted, timely, secure, or error-free. No advice or information, whether oral or written, obtained by You from the dotlabs shall create any warranty not expressly stated in the Terms.</p>
+      <p><strong>9.8.</strong> dotlabs will not be liable for any loss that You may incur as a consequence of unauthorized use of Your User Account or User Account information in connection with the Platform either with or without Your knowledge.</p>
+      <p><strong>9.9.</strong> dotlabs has endeavoured to ensure that all the information on the Platform is correct, but the dotlabs neither warrants nor makes any representations regarding the quality, accuracy or completeness of any data, information regarding the Services or otherwise. The dotlabs shall not be responsible for the delay or inability to use the Platform or related functionalities, the provision of or failure to provide functionalities, or for any information, software, functionalities, and related graphics obtained through the Platform, or otherwise arising out of the use of the Platform, whether based on contract, tort, negligence, strict liability or otherwise. Further, the dotlabs shall not be held responsible for non-availability of the Platform during periodic maintenance operations or any unplanned suspension of access to the Platform that may occur due to technical reasons or for any reason beyond the dotlabs’s reasonable control.</p>
+      <p><strong>9.10.</strong> The dotlabs shall have no liability whatsoever for any loss, damage that may be caused to You due to Your usage of the Platform and Services. Furthermore, in no event shall the dotlabs’s total liability to You for all losses, damages and causes of action exceed, in the aggregate, the amount paid by You, if any.</p>
+
+      <h2>10. UPDATION / AMENDMENT</h2>
+      <p><strong>10.1.</strong> dotlabs can update this or any other related policy by uploading an updated version of this policy on the Platform or any click-through format which would be considered a consent of the User.</p>
+      <p><strong>10.2.</strong> The most recent version of this or any other policy will govern the use of the information on the Platform. We may revise or amend this from time to time. If we decide to change this or any other related policy, we will inform You by posting the revised policies on the Platform. dotlabs may also notify You of changes to the policies via email to the email address associated with Your User Account. If You object to any changes in this or any other related policy, You should immediately stop using the Platform and/or Services and close any related accounts. By continuing to access or use the Platform and/or Services after changes have become effective, You agree to be bound by the revised amendments.</p>
+
+      <h2>11. LIMITATIONS OF LIABILITY</h2>
+      <p><strong>11.1.</strong> Notwithstanding anything to the contrary contained herein or elsewhere, in no event shall the total aggregate liability of the dotlabs, or any of the above-referenced respective parties, arising from or relating to the Platform, exceed the total amount paid to the dotlabs by a User for the Services under which such liability arose.</p>
+      <p><strong>11.2.</strong> The Platform may contain links to third-party Platforms that are not owned or controlled by dotlabs. dotlabs does not have any control over and assumes no responsibility for the Content, privacy policies, terms of use, or practices of any third-party Platforms. In addition, the dotlabs will not and cannot censor or edit the Content of any third-party website. By using third-party Platforms, You expressly relieve dotlabs from any liability arising from Your use of any third-party platform. Accordingly, please be advised to read the terms and conditions and Privacy Policy of each third-party platform that You visit, including those directed by the links contained on the Platform.</p>
+
+      <h2>12. INDEMNIFICATION AND RELEASE</h2>
+      <p><strong>12.1.</strong> You agree to defend, indemnify and hold harmless dotlabs, its affiliates, and its respective officers, managers, members, directors, employees, successors, assigns, subsidiaries, affiliates, suppliers, and agents, from and against any claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorneys’ fees) arising from Your use of, access to, and participation on the Platform; Your violation of any provision of the Terms; Your violation of any third-party right, including without limitation any copyright, property, proprietary, Intellectual Property Rights, or breach of Your express or implied representations and warranties. This defence and indemnification obligation will survive these Terms and Your use of the Platform. In no event shall the dotlabs, its affiliates, and its respective officers, managers, members, directors, employees, successors, assigns, subsidiaries, affiliates, suppliers, and agents, be liable to You or any third party for any special, incidental, indirect, consequential, or punitive damages whatsoever, arising out of or in connection with Your use of or access to the Platform or Content on the Platform.</p>
+
+      <h2>13. BREACH OF TERMS</h2>
+      <p><strong>13.1.</strong> Without prejudice to the dotlabs’s other rights under the Terms, if a User breaches any provisions of these Terms in any way, or if dotlabs reasonably suspects that a User has breached these Terms in any way, then dotlabs may take such action as it deems appropriate to deal with the breach, including (a) temporarily suspend such User’s access to the Platform, (b) permanently prohibit such User from accessing the Platform, (c) blocking computers/devices using such User’s IP address from accessing the Platform, (d) contacting any or all of such User’s internet service providers and request that they block such User’s access to the Platform, (e) commence legal action against such User, whether for breach of contract or otherwise; and/or (f) suspend or delete such User’s User Account.</p>
+
+      <h2>14. MODIFICATIONS TO OR TERMINATION OF THE PLATFORM</h2>
+      <p><strong>14.1. Modification or Cessation</strong> dotlabs reserves the right to, at any time and from time to time, modify or discontinue, temporarily or permanently, the Platform (or any part thereof), Services with or without notice and in its sole discretion. Users agree that the dotlabs shall not be liable to the User or any third party for any modification, suspension, or discontinuance of the Services offered by the dotlabs.</p>
+      <p><strong>14.2. Termination by dotlabs</strong> The Terms will continue to apply until terminated by either You or the dotlabs as set forth below. If You object to the Terms or are dissatisfied with the Platform, You may (i) close Your User Account on the Platform; and/or (ii) stop accessing the Platform. Furthermore, User hereby acknowledges and agree that the dotlabs, in its sole and absolute discretion, has the right (but not the obligation) to delete, terminate, or deactivate User Account, block User’s email or IP address, cancel the Platform or otherwise terminate User’s access to or participation in the use of the Platform (or any part thereof), or remove and discard any Content submitted by User on the Platform, immediately and without notice, for any reason, including without limitation, User Account inactivity or if the dotlabs believes or has reason to believe that the User has violated any provision of the Terms. You shall be liable to pay any fees or charges, if applicable in respect of the Services until the date of termination by either party whatsoever.</p>
+      <p><strong>14.3. Effect of Termination</strong> Upon termination of the User Account, User’s right to participate in the Platform shall stand terminated. In the event of termination, the User Account will be disabled and the User may not be granted access to the User Account or any other data contained in the User Account. Notwithstanding the foregoing, residual data may remain in dotlabs’s system. Upon termination of Service, the User’s access to the Platform shall be immediately revoked. The provisions of these Terms which by their very nature are intended to survive termination shall survive expiration or termination of the Platform or User Account.</p>
+
+      <h2>15. MISCELLANEOUS</h2>
+      <p><strong>15.1. Charges for Services</strong> The dotlabs may charge a fee for its Services, on a case to case basis subject to the User’s add-on requirement over and above the basic features of Platform as decided by the dotlabs from time to time.</p>
+      <p><strong>15.2. Governing Law and Jurisdiction</strong> The Terms shall be governed in all respects by the laws of India and any legal proceeding arising out of this Agreement will occur exclusively in the courts located in Chennai, Tamil Nadu, India</p>
+      <p><strong>15.3. Dispute Resolution</strong> Notwithstanding anything contained in these Terms, any dispute arising out of or in connection with dotlabs which is not resolved as per Clause 15.15 shall be referred to a binding arbitration in accordance with the provisions of the Arbitration and Conciliation Act, 1996 as amended. The Seat and Venue of Arbitration: Chennai, Tamil Nadu, India. The arbitral proceedings shall be conducted by a sole arbitrator in English and the award shall be final and binding.</p>
+      <p><strong>15.4. Advertisements</strong> The dotlabs may display advertisements and promotions on the Platform. The manner, mode, and extent of advertising by the dotlabs on the Platform are subject to change and the appearance of advertisements on the Platform does not imply endorsement by the dotlabs of any advertised products or Services. The User agrees that the dotlabs shall not be responsible or liable for any loss or damage of any sort incurred by the User as a result of any such dealings or as the result of the presence of such advertisers on the Platform.</p>
+      <p><strong>15.5. Communications</strong> You hereby expressly agree to receive communications by way of SMS, telephone calls, WhatsApp /or e-mails from the dotlabs and other third parties duly authorised by the dotlabs. You hereby expressly consent to the monitoring and recording, by the dotlabs of any and all communications between You and the dotlabs or its agents, employees, consultants, contractors, or representatives of the dotlabs or of their authorised partners as per the Applicable Law. You can unsubscribe or opt-out from receiving communications through SMS and e-mail from the dotlabs. In which case, the dotlabs will only send You communications solely required for the purposes of the Services provided through the Platform.</p>
+      <p><strong>15.6. IP Infringement</strong> If You believe the Platform violates Your intellectual property, You must promptly notify dotlabs in writing in the manner as stipulated under Clause 15.15. These notifications should only be submitted by the owner of the intellectual property, or an agent authorized to act on his/her behalf. However, any false claim by You may result in the termination of Your access to the Platform. You are required to provide the following details in Your notice:</p>
+      <div style="padding-left: 20px; margin-bottom: 16px;">
+        <p>a. the intellectual property that You believe is being infringed;</p>
+        <p>b. the item that You think is infringing and include sufficient information about where the material is located on the Platform;</p>
+        <p>c. a statement that You believe in good faith that the item You have identified as infringing is not authorized by the intellectual property owner, its agent, or the law to be used in connection with the Platform;</p>
+        <p>d. Your contact details, such as Your address, telephone number, and/or email;</p>
+        <p>e. a statement that the information You provided in Your notice is accurate, and that You are the intellectual property owner, or an agent authorized to act on behalf of the intellectual property owner whose intellectual property is being infringed; and</p>
+        <p>f. Your physical or electronic signature.</p>
+      </div>
+      
+      <p><strong>15.7. Use of Cookies</strong></p>
+      <p>15.7.1 The dotlabs uses cookies to aggregate information about the User’s sessions, track information, store certain User preferences, analyse web page flow, etc. so that the dotlabs can update and redesign the dotlabs Platform, as necessary, to provide User with the most useful information.</p>
+      <p>15.7.2 Users have the option to either accept or decline the use of cookies on their computer/device, whether they are registered or not. However, a User’s experience of the Platform shall be limited and certain features of the Platform will not be available if the User declines the use of Cookies.</p>
+      
+      <p><strong>15.8. Assignment</strong> The Terms, and any rights and licenses granted hereunder, may not be transferred or assigned by the User but may be assigned by the dotlabs without restriction.</p>
+      <p><strong>15.9. No Agency or Partnership</strong> No agency, partnership, joint venture, or employment is created as a result of the Terms or User’s use of any part of the Platform, including without limitation, the contract between the User and dotlabs. The User does not have any authority whatsoever to bind dotlabs in any respect. Neither dotlabs nor any User of the Platform may direct or control the day-to-day activities of the other or create or assume any obligation on behalf of the other.</p>
+      <p><strong>15.10. Force Majeure</strong> dotlabs shall not be liable to the User for any delay or failure in performance under the Terms, arising out of a cause beyond its control and without its fault or negligence. Such causes may include but are not limited to fires, floods, earthquakes, strikes, pandemic, unavailability of necessary utilities, blackouts, acts of God, acts of declared or undeclared war, acts of regulatory agencies, or national disasters.</p>
+      <p><strong>15.11. No Third-party Beneficiaries</strong> User agrees that, except as otherwise expressly provided in the Terms, there shall be no third-party beneficiaries to the Terms.</p>
+      <p><strong>15.12. Notice</strong> User agrees that dotlabs may provide the User with notices, including those regarding changes to the Terms, by email, regular mail, or postings on the Platform.</p>
+      <p><strong>15.13. Entire Agreement</strong> The Terms, together with the Privacy Policy, published by the dotlabs on the Platform, shall constitute the entire agreement between User and the dotlabs concerning the Platform.</p>
+      <p><strong>15.14. Waiver and Severability</strong> Any failure, delay or forbearance on the part of dotlabs in: (i) exercising any right, power or privilege under this Terms; or (ii) enforcing terms of this Terms, shall not operate as a waiver thereof, nor shall any single or partial exercise by dotlabs of any right, power or privilege preclude any other future exercise or enforcement thereof. Each of the terms contained in these Terms shall be severable, and the unenforceability of one or more provisions of these Terms shall not affect the enforceability of any other provision(s) or of the remainder of these Terms. If any provision of these Terms is found by a court of competent jurisdiction to be invalid, the parties nevertheless agree that the court should endeavour to give effect to the parties’ intentions as reflected in the provision.</p>
+      
+      <p><strong>15.15. Customer Care & Grievance Mechanism:</strong></p>
+      <p>15.15.1 The User is hereby informed that in case of any queries relating to the Services, the User may contact the customer care, the details are mentioned below:<br>
+      support@dotlabs.care</p>
+      <p>15.15.2 In the event the User has concerns / issues relating to the Services provided by dotlabs, the User is hereby informed that dotlabs aims to provide You the best experience and thereby, is fully committed to resolve all the issues faced by You in relation to the Services we provide within 15 (fifteen) days from the date of receipt of the complaint.</p>
+      <p>15.15.3 To Address the queries/concerns of the Users, please note that we have a fully committed redressal mechanism and that Your complaint shall be acknowledged within a period of 24 (twenty four) hours and the same be resolved within a period of 15 (fifteen) days. In this regard, kindly contact our grievance officer on the details below:</p>
+      <p>Abdul Lathif<br>
+      Director & CEO<br>
+      support@dotlabs.care dotlabs, HealthMaven Consultancy Pvt Ltd</p>
     </main>
 
     <footer>
-      <div>© 2026 DotLabs</div>
-      <div style="display:flex;gap:12px">
-        <a href="mailto:support@dotlabs.care" style="color:var(--muted);text-decoration:none">Contact</a>
-        <a href="privacy-policy.html" style="color:var(--muted);text-decoration:none">Privacy Policy</a>
-        <a href="index.html" style="color:var(--muted);text-decoration:none">Home</a>
+      <div>© 2026 dotlabs</div>
+      <div style="display:flex;gap:12px;align-items:center;color:var(--muted)">
+        <a href="#">Contact</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms-of-service.html">Terms</a>
       </div>
     </footer>
   </div>
