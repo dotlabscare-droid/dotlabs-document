@@ -1,79 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction - dotlabs</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
-        .card {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            max-width: 400px;
-            width: 100%;
-        }
-        h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
-            color: #111;
-        }
-        p {
-            color: #666;
-            font-size: 1.1em;
-            line-height: 1.5;
-            margin-bottom: 25px;
-        }
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .btn {
-            display: block;
-            padding: 10px 20px;
-            background-color: #0066cc;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.2s ease;
-        }
-        .btn:hover {
-            background-color: #0052a3;
-        }
-        .btn.secondary {
-            background-color: #e5e5e5;
-            color: #333;
-        }
-        .btn.secondary:hover {
-            background-color: #d5d5d5;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dotlabs — Health Insights</title>
+  <meta name="description" content="dotlabs — white-label health insights by HealthSutra.ai">
+  <style>
+    :root{
+      --primary: #135D66; /* primary_color */
+      --secondary: #10A19D; /* secondary_color */
+      --accent: #64CCC5; /* accent_color */
+      --bg: #f6fbfb;
+      --card: #ffffff;
+      --muted: #6b6b6b;
+      --radius: 14px;
+    }
+    *{box-sizing: border-box}
+    body{
+      margin:0; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: radial-gradient(1200px 400px at 10% 10%, rgba(100,204,197,0.08), transparent),
+                  radial-gradient(900px 300px at 90% 90%, rgba(16,161,157,0.05), transparent),
+                  var(--bg);
+      color: #0f1720;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      min-height:100vh;
+      display:flex;align-items:center;justify-content:center;
+      padding:40px;
+    }
+    .wrap{max-width:1100px;width:100%}
+    header{
+      display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;
+    }
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img.logo{height:48px}
+    .brand .title{font-weight:700;color:var(--primary);font-size:20px}
+    .brand .sub{font-size:12px;color:var(--muted)}
+
+    .hero{
+      background: linear-gradient(135deg, rgba(19,93,102,0.95), rgba(16,161,157,0.95));
+      color:white;padding:40px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(19,93,102,0.12);
+      display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:center;overflow:hidden;
+    }
+    .hero .left h1{margin:0;font-size:28px}
+    .hero .left p{margin:8px 0 16px;color:rgba(255,255,255,0.92)}
+    .cta-row{display:flex;gap:12px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;border:0;font-weight:600;cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#0db6ae);color:white}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.16);color:white}
+
+    .hero .stats{background:rgba(255,255,255,0.06);padding:18px;border-radius:12px}
+    .stat{display:flex;align-items:center;gap:12px}
+    .stat .n{font-size:22px;font-weight:700}
+    .stat .label{font-size:12px;color:rgba(255,255,255,0.9)}
+
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(16,161,157,0.06)}
+    .card h3{margin:0 0 8px}
+    .card p{margin:0;color:var(--muted)}
+
+    .feature-row{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin-top:18px}
+    .feature-big{background:linear-gradient(180deg, rgba(19,93,102,0.06), rgba(16,161,157,0.02));padding:24px;border-radius:12px}
+
+    footer{margin-top:18px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted)}
+
+    /* small screens */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .cards{grid-template-columns:1fr}
+      .feature-row{grid-template-columns:1fr}
+    }
+
+    /* subtle floating circles */
+    .decor{position:absolute;right:-120px;top:-60px;width:300px;height:300px;border-radius:50%;background:linear-gradient(180deg, rgba(100,204,197,0.12), transparent);filter:blur(30px);pointer-events:none}
+  </style>
 </head>
 <body>
+  <div class="decor" aria-hidden="true"></div>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <img src="images/dotlabs-logo.png" alt="dotlabs" class="logo">
+        <div>
+          <div class="title">dotlabs — Health Insights</div>
+          <div class="sub">A white-label solution powered by HealthSutra.ai</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <img src="images/healthsutra-logo.png" alt="HealthSutra" style="height:34px;opacity:0.95">
+        <a href="privacy-policy.html" style="color:var(--primary);text-decoration:none;font-weight:600">Privacy</a>
+        <a href="terms-of-service.html" style="color:var(--primary);text-decoration:none;font-weight:600">Terms</a>
+      </div>
+    </header>
 
-<div class="card">
-    <h1>Coming Soon</h1>
-    <p>We are currently working on something amazing. Check back soon for updates!!</p>
-    
-    <div class="links">
-        <!-- Temporary links to your legal pages if you hosted them as separate files -->
-        <a href="privacy-policy.html" class="btn secondary">Privacy Policy</a>
-        <a href="terms-of-service.html" class="btn secondary">Terms & Conditions</a>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="left">
+        <h1 id="hero-title">Smarter, personalized health insights</h1>
+        <p>Upload lab reports and let dotlabs analyze them for clear, actionable findings — all in your brand.</p>
+        <div class="cta-row">
+          <button class="btn primary">Get Started</button>
+          <button class="btn ghost">How it works</button>
+        </div>
+
+        <div style="display:flex;gap:12px;margin-top:18px">
+          <div class="hero-card stats" style="flex:1">
+            <div class="stat"><div class="n">0</div><div class="label">Uploaded Reports</div></div>
+          </div>
+          <div class="hero-card stats" style="flex:1">
+            <div class="stat"><div class="n">—</div><div class="label">Key Findings</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div style="background:linear-gradient(180deg,var(--accent),var(--secondary));padding:18px;border-radius:12px;color:white;box-shadow:0 8px 26px rgba(16,161,157,0.18)">
+          <div style="display:flex;justify-content:space-between;align-items:start">
+            <div>
+              <div style="font-weight:700;font-size:18px">Welcome to dotlabs</div>
+              <div style="opacity:0.95;margin-top:8px;font-size:13px">Health insights in a few clicks</div>
+            </div>
+            <div style="font-size:30px;opacity:0.9">📊</div>
+          </div>
+          <div style="margin-top:12px;font-size:13px;opacity:0.95">Try uploading a sample report to see instant highlights and risk categories.</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Family Members</h3>
+        <p>Create profiles and keep family health data in one place.</p>
+      </div>
+      <div class="card">
+        <h3>Total Reports</h3>
+        <p>Track the number of uploaded reports and trend over time.</p>
+      </div>
+      <div class="card">
+        <h3>Health Summary</h3>
+        <p>Quick snapshot of key metrics and alerts.</p>
+      </div>
     </div>
-</div>
 
+    <div class="feature-row">
+      <div class="feature-big card">
+        <h3>Actionable findings</h3>
+        <p>dotlabs highlights out-of-range markers, explains clinical relevance in plain language, and suggests next steps you can share with patients.</p>
+      </div>
+      <div class="card">
+        <h3>White-label ready</h3>
+        <p>Customise the look & feel, and integrate with your existing patient portals.</p>
+      </div>
+    </div>
+
+    <footer>
+      <div>© <strong>dotlabs</strong> — powered by HealthSutra.ai</div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <a href="#" style="color:var(--muted);text-decoration:none">Contact</a>
+        <a href="privacy-policy.html" style="color:var(--muted);text-decoration:none">Privacy</a>
+        <a href="terms-of-service.html" style="color:var(--muted);text-decoration:none">Terms</a>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
