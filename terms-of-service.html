@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DotLabs Terms of Service</title>
     <meta name="description" content="DotLabs Terms of Service">
-    <link rel="icon" href="/images/hm_logoold.png" type="image/png">
+    <link rel="icon" href="/images/hm_full.png" type="image/png">
     <style>
       :root{--primary:#135D66;--muted:#6b6b6b;--bg:#f6fbfb;--card:#ffffff;--radius:12px}
       *{box-sizing:border-box}
@@ -13,10 +13,10 @@
       .wrap{max-width:980px;margin:0 auto}
       header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
       .brand{display:flex;align-items:center;gap:12px}
-      .brand img.logo{height:40px}
+      .brand img.logo{height:40px;width:auto}
       .brand .title{font-weight:700;color:var(--primary);font-size:18px}
       .brand .sub{font-size:12px;color:var(--muted)}
-      .nav a{color:var(--primary);text-decoration:none;font-weight:600;margin-left:12px}
+      .nav a{color:var(--primary);text-decoration:none;margin-left:12px;font-weight:600}
       .container{background:var(--card);padding:32px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(19,93,102,0.06)}
       h1{text-align:center;margin:0 0 6px;font-size:28px}
       .updated-date{text-align:center;color:#666;font-style:italic;margin-bottom:18px}
@@ -28,16 +28,18 @@
 <body>
   <div class="wrap">
     <header>
-      <div class="brand">
-        <img src="/images/hm_logoold.png" alt="DotLabs logo" class="logo">
-        <div>
-          <div class="title">DotLabs</div>
-          <div class="sub">DotLabs Terms of Service</div>
-        </div>
+      <div class="brand" aria-label="DotLabs brand">
+        <a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none">
+          <img src="/images/hm_full.png" alt="DotLabs wordmark" class="logo">
+          <div>
+            <div class="title">DotLabs</div>
+            <div class="sub">DotLabs Terms of Service</div>
+          </div>
+        </a>
       </div>
       <nav>
-        <a href="/index.html">Home</a>
-        <a href="/privacy-policy.html">Privacy</a>
+        <a href="index.html">Home</a>
+        <a href="privacy-policy.html">Privacy</a>
       </nav>
     </header>
 
@@ -47,18 +49,16 @@
 
       <p>These terms of use (“Terms”) set out the terms on which you may access and use the DotLabs Platform. By using the Platform you agree to be bound by these Terms.</p>
 
-      <!-- original terms content preserved below; trimmed for editor brevity -->
-
       <h2>1. DEFINITIONS AND INTERPRETATION</h2>
       <p>Unless the context otherwise requires, for these Terms, the following terms shall have the meaning ascribed to them hereunder.</p>
 
-      <!-- rest of original terms content preserved -->
+      <!-- ... (rest of original terms content preserved) ... -->
 
       <div class="contact-info">
-          <strong>Abdul Lathif</strong><br>
-          Director & CEO<br>
-          Email: <a href="mailto:support@dotlabs.care">support@dotlabs.care</a><br>
-          dotlabs, HealthMaven Consultancy Pvt Ltd
+        <strong>Abdul Lathif</strong><br>
+        Director &amp; CEO<br>
+        Email: <a href="mailto:support@dotlabs.care">support@dotlabs.care</a><br>
+        dotlabs, HealthMaven Consultancy Pvt Ltd
       </div>
     </main>
 
@@ -66,8 +66,8 @@
       <div>© 2026 DotLabs</div>
       <div style="display:flex;gap:12px">
         <a href="mailto:support@dotlabs.care" style="color:var(--muted);text-decoration:none">Contact</a>
-        <a href="/privacy-policy.html" style="color:var(--muted);text-decoration:none">Privacy</a>
-        <a href="/index.html" style="color:var(--muted);text-decoration:none">Home</a>
+        <a href="privacy-policy.html" style="color:var(--muted);text-decoration:none">Privacy Policy</a>
+        <a href="index.html" style="color:var(--muted);text-decoration:none">Home</a>
       </div>
     </footer>
   </div>
