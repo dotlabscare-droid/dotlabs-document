@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>dotlabs</title>
+  <title>dotlabs — AI-powered health insights</title>
   <meta name="description" content="dotlabs — AI-powered health insights by HealthSutra.ai">
   <link rel="icon" href="/images/hm_full.png" type="image/png">
   <style>
@@ -14,123 +14,425 @@
       --bg: #f6fbfb;
       --card: #ffffff;
       --muted: #6b6b6b;
+      --dark-top: #0b3c42;
       --radius: 14px;
     }
     *{box-sizing: border-box}
     body{
       margin:0;
-      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      background: radial-gradient(1200px 400px at 10% 10%, rgba(100,204,197,0.08), transparent), var(--bg);
-      color: #0b2b2b;
+      padding:0;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; 
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(1200px 500px at 10% 15%, rgba(100,204,197,0.09), transparent), 
+        radial-gradient(1000px 400px at 85% 75%, rgba(16,161,157,0.06), transparent);
+      color: #333;
     }
-    /* center container horizontally, flow content top-to-bottom like a normal webpage */
+    
+    /* Top Utility Bar */
+    .top-bar {
+      background-color: var(--dark-top);
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 13px;
+      padding: 10px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .top-bar-left, .top-bar-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Main Container Structure */
     .wrap{
-      max-width:1100px;
-      width:100%;
-      margin: 32px auto; /* centers horizontally and gives top spacing */
-      padding: 0 16px;   /* small side padding for small screens */
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 40px;
     }
-    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+
+    /* Navbar Styling */
+    header.main-header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 0;
+    }
     .brand{display:flex;align-items:center;gap:14px}
-    .brand img.logo{height:48px}
-    .brand .title{font-weight:700;color:var(--primary);font-size:20px}
-    .brand .sub{font-size:12px;color:var(--muted)}
+    .brand img.logo{height:52px}
+    .brand .title{font-weight:700;color:var(--primary);font-size:24px;letter-spacing:-0.5px}
+    .brand .sub{font-size:12px;color:var(--muted);max-width:320px;line-height:1.3}
+    
+    nav.nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+    nav.nav-links a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: color 0.2s ease;
+    }
+    nav.nav-links a:hover {
+      color: var(--secondary);
+    }
 
-    .hero{background:linear-gradient(135deg, rgba(19,93,102,0.95), rgba(16,161,157,0.95)); color:white;padding:40px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(19,93,102,0.12); display:grid;grid-template-columns:1fr 360px;gap:18px}
-    .hero .left h1{margin:0;font-size:28px}
-    .hero .left p{margin:8px 0 16px;color:rgba(255,255,255,0.92)}
-    .cta-row{display:flex;gap:12px}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;border:0;font-weight:600;cursor:pointer}
-    .btn.primary{background:linear-gradient(90deg,var(--accent),#0db6ae);color:white}
-    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.16);color:white}
+    /* Expanded Hero Workspace Split Layout */
+    .hero-section {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      padding: 40px 0 60px 0;
+      align-items: center;
+    }
+    .hero-left h1 {
+      margin: 0 0 20px 0;
+      font-size: 46px;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.15;
+      letter-spacing: -1px;
+    }
+    .hero-left p.tagline {
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--muted);
+      margin: 0 0 32px 0;
+      max-width: 620px;
+    }
+    
+    /* Core Feature Checklist Row */
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+      color: #2c4a4e;
+    }
+    .check-icon {
+      color: var(--secondary);
+      font-weight: bold;
+      font-size: 18px;
+    }
 
-    .hero .stats{background:rgba(255,255,255,0.06);padding:18px;border-radius:12px}
-    .stat{display:flex;align-items:center;gap:12px}
-    .stat .n{font-size:22px;font-weight:700}
-    .stat .label{font-size:12px;color:rgba(255,255,255,0.9)}
+    .cta-row{display:flex;gap:16px}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:14px 28px;
+      border-radius:10px;
+      border:0;
+      font-weight:600;
+      font-size:15px;
+      cursor:pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+    .btn.primary{
+      background: linear-gradient(90deg, var(--secondary), #0db6ae);
+      color: white;
+      box-shadow: 0 4px 14px rgba(16,161,157,0.25);
+    }
+    .btn.ghost{
+      background: white;
+      border: 1px solid rgba(19,93,102,0.18);
+      color: var(--primary);
+    }
 
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
-    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(16,161,157,0.06)}
-    .card h3{margin:0 0 8px}
-    .card p{margin:0;color:var(--muted)}
+    /* Embedded Form Component Panel UI */
+    .hero-right-panel {
+      background: linear-gradient(135deg, rgba(19,93,102,0.98), rgba(16,161,157,0.98));
+      color: white;
+      padding: 40px;
+      border-radius: var(--radius);
+      box-shadow: 0 20px 40px rgba(19,93,102,0.15);
+    }
+    .panel-head h3 {
+      margin: 0 0 8px 0;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .panel-head p {
+      margin: 0 0 28px 0;
+      color: rgba(255,255,255,0.85);
+      font-size: 14px;
+    }
+    
+    .panel-stats {
+      display: flex;
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .stat-mini-card {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 16px;
+      border-radius: 10px;
+      flex: 1;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .stat-mini-card .num {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .stat-mini-card .label {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-top: 4px;
+    }
 
-    .feature-row{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin-top:18px}
-    .feature-big{background:linear-gradient(180deg, rgba(19,93,102,0.06), rgba(16,161,157,0.02));padding:24px;border-radius:12px}
+    /* Informational Standard Grid Columns Block */
+    .cards-section {
+      padding: 40px 0;
+    }
+    .section-title {
+      font-size: 24px;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .info-card {
+      background: var(--card);
+      padding: 32px;
+      border-radius: var(--radius);
+      box-shadow: 0 6px 20px rgba(16,161,157,0.05);
+      border: 1px solid rgba(16,161,157,0.04);
+      transition: y 0.2s;
+    }
+    .info-card h3 {
+      margin: 0 0 12px 0;
+      font-size: 20px;
+      color: var(--primary);
+    }
+    .info-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
 
-    footer{margin-top:18px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted)}
+    /* Lower Feature Presentation Layer Row split */
+    .feature-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+      margin: 24px 0 80px 0;
+    }
+    .feature-big {
+      background: linear-gradient(180deg, rgba(19,93,102,0.05), rgba(16,161,157,0.02));
+      padding: 36px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(19,93,102,0.06);
+    }
+    .feature-big h3 {
+      margin: 0 0 12px 0;
+      font-size: 22px;
+      color: var(--primary);
+    }
+    .feature-big p {
+      margin: 0;
+      color: #4a5556;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+    .feature-side {
+      background: var(--card);
+      padding: 36px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(16,161,157,0.05);
+      box-shadow: 0 6px 20px rgba(16,161,157,0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-    @media (max-width:900px){.hero{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.feature-row{grid-template-columns:1fr}}
-    .decor{position:absolute;right:-120px;top:-60px;width:300px;height:300px;border-radius:50%;background:linear-gradient(180deg, rgba(100,204,197,0.12), transparent);filter:blur(30px);pointer-events:none}
+    /* Expanded Structural Footer Frame */
+    footer.main-footer {
+      background-color: #ffffff;
+      border-top: 1px solid rgba(19,93,102,0.08);
+      padding: 40px 0;
+      margin-top: 40px;
+    }
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    /* Responsive Constraints Styling */
+    @media (max-width: 1024px) {
+      .hero-section { grid-template-columns: 1fr; gap: 32px; }
+      .cards-grid { grid-template-columns: 1fr; gap: 18px; }
+      .feature-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .top-bar { display: none; }
+      header.main-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .checklist-grid { grid-template-columns: 1fr; }
+      .footer-content { flex-direction: column; gap: 16px; text-align: center; }
+    }
   </style>
 </head>
 <body>
-  <div class="decor" aria-hidden="true"></div>
+
+  <!-- Prominent Dynamic Bar Top Line Alignment Framework -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <span>✉ support@dotlabs.care</span>
+      <span>⏰ 24/7 AI Processing Online</span>
+    </div>
+    <div class="top-bar-right">
+      <span>🇮🇳 Powered by HealthSutra.ai</span>
+    </div>
+  </div>
+
   <div class="wrap">
-    <header>
+    <header class="main-header">
       <div class="brand">
         <img src="/images/hm_full.png" alt="dotlabs logo" class="logo">
         <div>
           <div class="title">dotlabs</div>
-          <div class="sub">dotlabs is an AI-powered health insights platform that analyzes laboratory reports and provides clear, actionable health summaries.</div>
+          <div class="sub">An AI-powered health insights platform that analyzes laboratory reports and provides clear, actionable summaries.</div>
         </div>
       </div>
-      <div style="display:flex;gap:12px;align-items:center">
-        <a href="privacy-policy.html" style="color:var(--primary);text-decoration:none;font-weight:600">Privacy</a>
-        <a href="terms-of-service.html" style="color:var(--primary);text-decoration:none;font-weight:600">Terms</a>
-      </div>
+      <nav class="nav-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+      </nav>
     </header>
 
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="left">
-        <h1 id="hero-title">Smarter, personalized health insights</h1>
-        <p>Upload lab reports and let dotlabs analyze them for clear, actionable findings — all in your brand.</p>
-        <div class="cta-row">
-          <button class="btn primary">Get Started</button>
-          <button class="btn ghost">How it works</button>
+    <!-- Split Widescreen Interactive Section -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-left">
+        <h1 id="hero-title">Smarter, personalized health report analytics</h1>
+        <p class="tagline">Upload patient pathology or laboratory metrics sheets and receive clear, instantaneous tracking metrics and breakdown insights tailored to your enterprise branding requirements.</p>
+        
+        <!-- Checklist elements filling horizontal whitespace -->
+        <div class="checklist-grid">
+          <div class="check-item"><span class="check-icon">✓</span> Automated Marker Parsing</div>
+          <div class="check-item"><span class="check-icon">✓</span> Clinical Reference Mapping</div>
+          <div class="check-item"><span class="check-icon">✓</span> Plain Language Explanations</div>
+          <div class="check-item"><span class="check-icon">✓</span> Custom Diagnostic Grouping</div>
         </div>
 
-        <div style="display:flex;gap:12px;margin-top:18px">
-          <div class="hero-card stats" style="flex:1">
-            <div class="stat"><div class="n">0</div><div class="label">Uploaded Reports</div></div>
-          </div>
-          <div class="hero-card stats" style="flex:1">
-            <div class="stat"><div class="n">—</div><div class="label">Key Findings</div></div>
-          </div>
+        <div class="cta-row">
+          <button class="btn primary">Get Started Instantly</button>
+          <button class="btn ghost">Explore Enterprise Features</button>
         </div>
       </div>
 
-      <div class="right">
-        <div style="background:linear-gradient(180deg,var(--accent),var(--secondary));padding:18px;border-radius:12px;color:white;box-shadow:0 8px 26px rgba(16,161,157,0.18)">
-          <div style="display:flex;justify-content:space-between;align-items:start">
-            <div>
-              <div style="font-weight:700;font-size:18px">Welcome to dotlabs</div>
-              <div style="opacity:0.95;margin-top:8px;font-size:13px">Health insights in a few clicks</div>
-            </div>
-            <div style="font-size:30px;opacity:0.9">📊</div>
+      <!-- Right Lead Platform Interface Showcase Container Block -->
+      <div class="hero-right">
+        <div class="hero-right-panel">
+          <div class="panel-head">
+            <h3>Welcome to dotlabs Workspace</h3>
+            <p>Obtain high-fidelity health diagnostics highlights and structural trends in just a few clicks.</p>
           </div>
-          <div style="margin-top:12px;font-size:13px;opacity:0.95">Try uploading a sample report to see instant highlights and risk categories.</div>
+          
+          <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; border: 1px dashed rgba(255,255,255,0.2); text-align: center; cursor: pointer;">
+            <div style="font-size: 40px; margin-bottom: 8px;">📊</div>
+            <div style="font-weight: 600; font-size: 15px;">Drop Your Test PDF / Image Here</div>
+            <div style="font-size: 12px; opacity: 0.8; margin-top: 4px;">Supports standard pathology metrics outputs</div>
+          </div>
+
+          <div class="panel-stats">
+            <div class="stat-mini-card">
+              <div class="num">0</div>
+              <div class="label">Uploaded Reports</div>
+            </div>
+            <div class="stat-mini-card">
+              <div class="num">—</div>
+              <div class="label">Active Risk Triggers</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <div class="cards">
-      <div class="card"><h3>Family Members</h3><p>Create profiles and keep family health data in one place.</p></div>
-      <div class="card"><h3>Total Reports</h3><p>Track the number of uploaded reports and trend over time.</p></div>
-      <div class="card"><h3>Health Summary</h3><p>Quick snapshot of key metrics and alerts.</p></div>
-    </div>
-
-    <div class="feature-row">
-      <div class="feature-big card"><h3>Actionable findings</h3><p>dotlabs highlights out-of-range markers, explains clinical relevance in plain language, and suggests next steps you can share with pa[...]
-    </div>
-
-    <footer>
-      <div>© 2026 dotlabs</div>
-      <div style="display:flex;gap:12px;align-items:center;color:var(--muted)">
-        <a href="#" style="color:var(--muted);text-decoration:none">Contact</a>
-        <a href="privacy-policy.html" style="color:var(--muted);text-decoration:none">Privacy</a>
-        <a href="terms-of-service.html" style="color:var(--muted);text-decoration:none">Terms</a>
+    <!-- Extended Info Cards Block Structure -->
+    <section class="cards-section">
+      <h2 class="section-title">Comprehensive Profile & Lifecycle Tracking</h2>
+      <div class="cards-grid">
+        <div class="info-card">
+          <h3>Family Members</h3>
+          <p>Create dedicated localized health profile branches to store, safely organize, and trend parameters across distinct timelines.</p>
+        </div>
+        <div class="info-card">
+          <h3>Total Reports Matrix</h3>
+          <p>Track cumulative metric volumes over operational cycles and review micro-fluctuations inside data groups over extensive durations.</p>
+        </div>
+        <div class="info-card">
+          <h3>Health Summary Reports</h3>
+          <p>Generate clean tabular snapshots, color-coded threshold triggers, and real-time vital summary listings instantly.</p>
+        </div>
       </div>
-    </footer>
+    </section>
+
+    <!-- Feature Row Blocks Structure Row Split -->
+    <div class="feature-row">
+      <div class="feature-big">
+        <h3>Actionable Clinical Findings & Insight Synthetics</h3>
+        <p>dotlabs seamlessly extracts out-of-range chemical and physiological indicators, standardizes testing formats, provides clear references in plain syntax layouts, and charts logical summary points you can rapidly share with medical practitioners and active processing operators.</p>
+      </div>
+      <div class="feature-side">
+        <div style="text-align: center;">
+          <div style="font-size: 28px; font-weight: 700; color: var(--primary);">100% Secure</div>
+          <div style="font-size: 13px; color: var(--muted); margin-top: 6px;">End-To-End Encrypted HIPAA Compliant Datastores</div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- Extended Framework Footer Container -->
+  <footer class="main-footer">
+    <div class="wrap">
+      <div class="footer-content">
+        <div>© 2026 dotlabs. All rights reserved. Powered by HealthMaven Consultancy Pvt Ltd.</div>
+        <div class="footer-links">
+          <a href="#">Contact Us</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
