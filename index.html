@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>dotlabs — Health Insights</title>
+  <title>dotlabs</title>
   <meta name="description" content="dotlabs — white-label health insights by HealthSutra.ai">
+  <!-- favicon: use SVG logo so the tab shows the dotlabs logo -->
+  <link rel="icon" href="/hm_logo.svg" type="image/svg+xml">
   <style>
     :root{
       --primary: #135D66; /* primary_color */
@@ -72,7 +74,7 @@
     }
 
     /* subtle floating circles */
-    .decor{position:absolute;right:-120px;top:-60px;width:300px;height:300px;border-radius:50%;background:linear-gradient(180deg, rgba(100,204,197,0.12), transparent);filter:blur(30px);pointer-events:none;z-index:-1}
+    .decor{position:absolute;right:-120px;top:-60px;width:300px;height:300px;border-radius:50%;background:linear-gradient(180deg, rgba(100,204,197,0.12), transparent);filter:blur(30px);pointer-events:none}
   </style>
 </head>
 <body>
@@ -83,7 +85,8 @@
         <!-- switched to repository SVG so it loads correctly -->
         <img src="/hm_logo.svg" alt="dotlabs" class="logo">
         <div>
-          <div class="title">dotlabs — Health Insights</div>
+          <div class="title">dotlabs</div>
+          <div class="sub">A white-label solution powered by HealthSutra.ai</div>
         </div>
       </div>
       <div style="display:flex;gap:12px;align-items:center">
@@ -145,6 +148,10 @@
       <div class="feature-big card">
         <h3>Actionable findings</h3>
         <p>dotlabs highlights out-of-range markers, explains clinical relevance in plain language, and suggests next steps you can share with patients.</p>
+      </div>
+      <div class="card">
+        <h3>White-label ready</h3>
+        <p>Customise the look & feel, and integrate with your existing patient portals.</p>
       </div>
     </div>
 
