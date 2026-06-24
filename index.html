@@ -20,14 +20,16 @@
     body{
       margin:0;
       font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
       background: radial-gradient(1200px 400px at 10% 10%, rgba(100,204,197,0.08), transparent), var(--bg);
+      color: #0b2b2b;
     }
-    .wrap{max-width:1100px;width:100%}
+    /* center container horizontally, flow content top-to-bottom like a normal webpage */
+    .wrap{
+      max-width:1100px;
+      width:100%;
+      margin: 32px auto; /* centers horizontally and gives top spacing */
+      padding: 0 16px;   /* small side padding for small screens */
+    }
     header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
     .brand{display:flex;align-items:center;gap:14px}
     .brand img.logo{height:48px}
